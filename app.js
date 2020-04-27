@@ -51,11 +51,13 @@ passport.deserializeUser(function (id, cb) {
 
 var app = express();
 
+let expressSessionSecret = process.env.EXP_SESSION_SECRET || 'bfgvchxWSUJHEFAXCZ';
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(require('body-parser').urlencoded({ extended: true }));
-app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+app.use(require('express-session')({ secret: expressSessionSecret, resave: false, saveUninitialized: false }));
 
 // Initialise passport
 app.use(passport.initialize());
