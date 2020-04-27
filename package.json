@@ -9,6 +9,8 @@
     "type": "git",
     "url": "git+https://github.com/Swimming-Club-Data-Systems/Live-Results-Web.git"
   },
+  "homepage": "https://github.com/Swimming-Club-Data-Systems/Live-Results-Web",
+  "readme": "readme.md",
   "scripts": {
     "start": "node ./bin/www"
   },
